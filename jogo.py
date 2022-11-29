@@ -15,6 +15,8 @@ pygame.display.set_caption('Carrinhos UHU!')
 background_image= pygame.image.load('D:\Insper\DeSoft\Pygame_Melina\imagens/cargame.png').convert_alpha()
 sound_menu = pygame.mixer.Sound('D:\Insper\DeSoft\Pygame_Melina\sons/menu.wav')
 
+menu_inicial = True
+play_one = False
 
 # ----- cria funções
 def tela_menu_inicial(tela):
@@ -180,6 +182,7 @@ class Borda(pygame.sprite.Sprite):
             self.rect.y = altura_da_tela + altura_comp
 
 
+
 # ----- Inicia estruturas de dados
 game = True
 
@@ -215,8 +218,27 @@ sprites.add(cainicial)
 
 # ===== Loop principal =====
 while game:
+
+
+
     sound_menu.play()
+    
     clock.tick(FPS)
+
+    
+    for event in pygame.event.get():
+    # Mouse Posição Click
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            pos = pygame.mouse.get_pos()
+
+
+    if menu_inicial:
+        tela_menu_inicial(window)
+        if not play_one:
+            play_one=True
+
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            menu_inicial = False
 
     # ----- Trata eventos
     for event in pygame.event.get():
