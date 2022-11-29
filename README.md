@@ -1,7 +1,11 @@
 # Pygame_Melina
+O PYGAME:
+O projeto consiste na construção de um jogo utilizando da ferramenta do pygame.
+
+AUTORA:
+Melina Stergiou
 
 INSTRUÇÕES DE JOGO:
-
 -> Para iniciar o jogo basta rodar a página
 
 -> O jogo funciona com 2 jogadores cada um será um carrinho na tela
@@ -10,3 +14,5 @@ INSTRUÇÕES DE JOGO:
 
 -> Cada jogador joga em um canto do teclado. Para o jogador da esquerda, os comandos apertados serão "A" e "D" (sendo A mover o carrinho para a esquerda e D mover o carrinho para direita), para o jogador da direita, os comandos apertados serão as setas do teclado (sendo a para esquerda, para a esquerda e a para direita, para direita).
 
+PARA ASSISTIR AO FUNCIONAMENTO DO JOGO:
+https://youtu.be/au4qZvjXI6o 

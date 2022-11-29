@@ -205,9 +205,8 @@ sprites.add(carro_a)
 sprites.add(cvinicial)
 sprites.add(cainicial)
 
+
 # tela menu inicial
-
-
 menu_inicial = True
 play_one = False
 
@@ -242,6 +241,7 @@ game_start = True
 
 # ===== Loop principal =====
 while game:
+
     if game_over:
         if game_start:
             game_front_screen()
