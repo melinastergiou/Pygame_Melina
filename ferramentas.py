@@ -15,15 +15,15 @@ font = pygame.font.SysFont(None, 48)
 
 
 # --- imagens ---
-background = pygame.image.load('recursos/fundo.png').convert()
+background = pygame.image.load('imagens/fundo.png').convert()
 
-quadrado_v_img = pygame.image.load('recursos/quadrado_v.png').convert_alpha()
-circulo_v_img = pygame.image.load('recursos/circulo_v.png').convert_alpha()
-carro_v_img = pygame.image.load('recursos/carro_v.png')
+quadrado_v_img = pygame.image.load('imagens/quadrado_v.png').convert_alpha()
+circulo_v_img = pygame.image.load('imagens/circulo_v.png').convert_alpha()
+carro_v_img = pygame.image.load('imagens/carro_v.png')
 
-quadrado_a_img = pygame.image.load('recursos/quadrado_a.png').convert_alpha()
-circulo_a_img = pygame.image.load('recursos/circulo_a.png').convert_alpha()
-carro_a_img = pygame.image.load('recursos/carro_a.png')
+quadrado_a_img = pygame.image.load('imagens/quadrado_a.png').convert_alpha()
+circulo_a_img = pygame.image.load('imagens/circulo_a.png').convert_alpha()
+carro_a_img = pygame.image.load('imagens/carro_a.png')
 
 quadrado_v_img = pygame.transform.scale(quadrado_v_img, (largura_comp, altura_comp))
 circulo_v_img = pygame.transform.scale(circulo_v_img, (largura_comp, altura_comp))
@@ -33,7 +33,9 @@ quadrado_a_img = pygame.transform.scale(quadrado_a_img, (largura_comp, altura_co
 circulo_a_img = pygame.transform.scale(circulo_a_img, (largura_comp, altura_comp))
 carro_a_img = pygame.transform.scale(carro_a_img, (largura_comp, altura_carro))
 
-borda_img = pygame.image.load('recursos/Borda.PNG').convert()
+borda_img = pygame.image.load('imagens/Borda.PNG').convert()
 borda_img = pygame.transform.scale(borda_img, (largura_da_tela, 1))
 
-# ---- funcções ------
+# ---- funcções e classes------
+
+# --------- obstáculos -------
