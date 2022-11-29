@@ -2,6 +2,9 @@
 O PYGAME:
 O projeto consiste na construção de um jogo utilizando da ferramenta do pygame.
 
+O CÓDIGO: 
+Para melhor organização, a pasta "sons" inclue os efeitos sonoros do jogo, a pasta "imagens" as imagens utilizadas e o arquivo "jogo" o código em si.
+
 AUTORA:
 Melina Stergiou
 
