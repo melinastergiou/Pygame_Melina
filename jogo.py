@@ -1,13 +1,22 @@
 
 import pygame 
 import random
+from ferramentas import *
 
 pygame.init()
+
+# ----- Gera tela principal
+largura_da_tela = 484
+altura_da_tela = 968
+window = pygame.display.set_mode((largura_da_tela, altura_da_tela))
+pygame.display.set_caption('jogo')
+
 
 game = True
 
 clock = pygame.time.Clock()
 FPS = 60
+
 
 # ===== Loop principal =====
 while game:
@@ -39,4 +48,3 @@ while game:
 
     sprites.update()
 
-  # LEMBRAR DE ADICIONAR IMAGENS
