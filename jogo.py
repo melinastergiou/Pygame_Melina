@@ -211,28 +211,47 @@ sprites.add(cainicial)
 menu_inicial = True
 play_one = False
 
+font_name = pygame.font.match_font('Algerian')
+def draw_text(display, text, size, x, y):
+    font = pygame.font.Font(font_name, size)
+    text_surface = font.render(text, True, (0,0,0))
+    text_rect = text_surface.get_rect()
+    text_rect.midtop = (x, y)
+    window.blit(text_surface, text_rect)
+
+def game_front_screen():
+    window.blit(background, (0, 0))
+    if not play_one:
+        background_image= pygame.image.load('imagens/cargame.png').convert_alpha()
+        background_image = pygame.transform.scale(background_image, (largura_da_tela, altura_da_tela))  # scale image
+        window.blit(background_image,(0,0))
+    else:
+        draw_text(window, "Press a key to begin!", 54, largura_da_tela / 2, altura_da_tela/2)
+    pygame.display.flip()
+    waiting = True
+    while waiting:
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+            if event.type == pygame.KEYUP:
+                waiting = False
+
+game_over = True
+game_start = True
+
 # ===== Loop principal =====
 while game:
-
+    if game_over:
+        if game_start:
+            game_front_screen()
+        game_start = False
+    game_over = False
     sound_menu.play()
     
     clock.tick(FPS)
 
     
-    # for event in pygame.event.get():
-    # # # Mouse Posição Click
-    #     if event.type == pygame.MOUSEBUTTONDOWN:
-    #         pos = pygame.mouse.get_pos()
-
-
-    #     if menu_inicial:
-    #         tela_menu_inicial(window)
-    #     if not play_one:
-    #         play_one=Trueda
-
-    #     if event.type == pygame.MOUSEBUTTONDOWN:
-    #         menu_inicial = False
-
 
 
     # ----- Trata eventos
