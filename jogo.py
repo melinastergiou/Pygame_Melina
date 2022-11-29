@@ -15,9 +15,6 @@ pygame.display.set_caption('Carrinhos UHU!')
 background_image= pygame.image.load('imagens/cargame.png').convert_alpha()
 sound_menu = pygame.mixer.Sound('sons/menu.wav')
 
-# menu_inicial = True
-# play_one = False
-
 # ----- cria funções
 
 def cria_obstaculos_seguintes():
@@ -210,6 +207,10 @@ sprites.add(cainicial)
 
 # tela menu inicial
 
+
+menu_inicial = True
+play_one = False
+
 # ===== Loop principal =====
 while game:
 
@@ -219,18 +220,20 @@ while game:
 
     
     # for event in pygame.event.get():
-    # # Mouse Posição Click
+    # # # Mouse Posição Click
     #     if event.type == pygame.MOUSEBUTTONDOWN:
     #         pos = pygame.mouse.get_pos()
 
 
-    # if menu_inicial:
-    #     tela_menu_inicial(window)
+    #     if menu_inicial:
+    #         tela_menu_inicial(window)
     #     if not play_one:
-    #         play_one=True
+    #         play_one=Trueda
 
     #     if event.type == pygame.MOUSEBUTTONDOWN:
     #         menu_inicial = False
+
+
 
     # ----- Trata eventos
     for event in pygame.event.get():
@@ -257,15 +260,16 @@ while game:
 
     sprites.update()
 
-# FALTA COLOCAR A PARTIR DAQUI + SOM + POSSÍVEL ANIMAÇÃO
-    
-
     # ----- Verifica Colisões
     hitsquadradosv = pygame.sprite.spritecollide(carro_v, todosquadrados, True)
     hitsquadradosa = pygame.sprite.spritecollide(carro_a, todosquadrados, True)
     hitsquadrados = len(hitsquadradosv) + len(hitsquadradosa)
     if hitsquadrados > 0:
         game = False
+        window.blit(background_image, (0,0)) # AQUI POR QUE NÃO MOSTRA?
+    
+
+
 
     hitscirculosv = pygame.sprite.spritecollide(carro_v, todoscirculos, True)
     hitscirculosa = pygame.sprite.spritecollide(carro_a, todoscirculos, True)
@@ -277,6 +281,9 @@ while game:
     fora = pygame.sprite.spritecollide(borda, todoscirculos, True)
     if len(fora) > 0:
         game = False
+        window.blit(background_image, (0,0)) # AQUI POR QUE NÃO MOSTRA?
+
+
 
     n_sei_nome = pygame.sprite.spritecollide(borda2, todosquadrados, True)
 
