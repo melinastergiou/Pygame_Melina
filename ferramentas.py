@@ -163,27 +163,4 @@ class Borda(pygame.sprite.Sprite):
         else: 
             self.rect.y = altura_da_tela + altura_comp
 
-# ----- criando obstaculos
 
-todosquadrados = pygame.sprite.Group()
-todoscirculos = pygame.sprite.Group()
-carros = pygame.sprite.Group()
-sprites = pygame.sprite.Group()
-
-carro_v = Carro(carro_v_img, 'v')
-carro_a = Carro(carro_a_img, 'a')
-
-cvinicial = Circulo(circulo_v_img, posições[0], 300)
-cainicial = Circulo(circulo_a_img, posições[2], 300)
-
-borda = Borda(borda_img, 1)
-borda2 = Borda(borda_img, 2)
-
-todoscirculos.add(cvinicial)
-todoscirculos.add(cainicial)
-carros.add(carro_v)
-carros.add(carro_a)
-sprites.add(carro_v)
-sprites.add(carro_a)
-sprites.add(cvinicial)
-sprites.add(cainicial)
