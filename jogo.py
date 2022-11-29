@@ -18,3 +18,23 @@ while game:
         # ----- Verifica consequências
         if event.type == pygame.QUIT:
             game = False
+
+            
+        if event.type == pygame.KEYUP:
+            if event.key == pygame.K_LEFT and carro_a.indice != 0:
+                carro_a.speedx = -12
+                carro_a.indice = 0
+
+            if event.key == pygame.K_RIGHT and carro_a.indice != 1:
+                carro_a.speedx = 12
+                carro_a.indice = 1
+
+            if event.key == pygame.K_a and carro_v.indice != 0:
+                carro_v.speedx = -12
+                carro_v.indice = 0
+
+            if event.key == pygame.K_d and carro_v.indice != 1:
+                carro_v.speedx = 12
+                carro_v.indice = 1
+
+    sprites.update()
