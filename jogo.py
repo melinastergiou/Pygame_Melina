@@ -28,7 +28,7 @@ while game:
         if event.type == pygame.QUIT:
             game = False
 
-            
+            # serão criados (carro a carro v)
         if event.type == pygame.KEYUP:
             if event.key == pygame.K_LEFT and carro_a.indice != 0:
                 carro_a.speedx = -12
