@@ -32,7 +32,8 @@ while game:
         if event.type == pygame.KEYUP:
             if event.key == pygame.K_LEFT and carro_a.indice != 0:
                 carro_a.speedx = -12
-                carro_a.indice = 0
+                carro_a.indice=0
+            
 
             if event.key == pygame.K_RIGHT and carro_a.indice != 1:
                 carro_a.speedx = 12
@@ -47,4 +48,3 @@ while game:
                 carro_v.indice = 1
 
     sprites.update()
-
