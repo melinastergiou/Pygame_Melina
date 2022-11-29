@@ -38,3 +38,5 @@ while game:
                 carro_v.indice = 1
 
     sprites.update()
+
+  # LEMBRAR DE ADICIONAR IMAGENS
