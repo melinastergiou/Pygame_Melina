@@ -12,19 +12,13 @@ altura_da_tela = 650
 window = pygame.display.set_mode((largura_da_tela, altura_da_tela))
 pygame.display.set_caption('Carrinhos UHU!')
 
-background_image= pygame.image.load('D:\Insper\DeSoft\Pygame_Melina\imagens/cargame.png').convert_alpha()
-sound_menu = pygame.mixer.Sound('D:\Insper\DeSoft\Pygame_Melina\sons/menu.wav')
+background_image= pygame.image.load('imagens/cargame.png').convert_alpha()
+sound_menu = pygame.mixer.Sound('sons/menu.wav')
 
-menu_inicial = True
-play_one = False
+# menu_inicial = True
+# play_one = False
 
 # ----- cria funções
-def tela_menu_inicial(tela):
-    
-    # FUNDO 
-    tela.blit(background_image, (0,0))
-    
-    return None
 
 def cria_obstaculos_seguintes():
     obstaculos_vermelho = [1,2]
@@ -77,15 +71,15 @@ lista_posv = [posições[0], posições[1]]
 lista_posa = [posições[2], posições[3]]
 pontuação = 0
 font = pygame.font.SysFont(None, 48)
-background = pygame.image.load('D:\Insper\DeSoft\Pygame_Melina\imagens/fundo.png').convert()
+background = pygame.image.load('imagens/fundo.png').convert()
 
-quadrado_v_img = pygame.image.load('D:\Insper\DeSoft\Pygame_Melina\imagens/quadrado_v.png').convert_alpha()
-circulo_v_img = pygame.image.load('D:\Insper\DeSoft\Pygame_Melina\imagens/circulo_v.png').convert_alpha()
-carro_v_img = pygame.image.load('D:\Insper\DeSoft\Pygame_Melina\imagens/carro_v.png')
+quadrado_v_img = pygame.image.load('imagens/quadrado_v.png').convert_alpha()
+circulo_v_img = pygame.image.load('imagens/circulo_v.png').convert_alpha()
+carro_v_img = pygame.image.load('imagens/carro_v.png')
 
-quadrado_a_img = pygame.image.load('D:\Insper\DeSoft\Pygame_Melina\imagens/quadrado_a.png').convert_alpha()
-circulo_a_img = pygame.image.load('D:\Insper\DeSoft\Pygame_Melina\imagens/circulo_a.png').convert_alpha()
-carro_a_img = pygame.image.load('D:\Insper\DeSoft\Pygame_Melina\imagens/carro_a.png')
+quadrado_a_img = pygame.image.load('imagens/quadrado_a.png').convert_alpha()
+circulo_a_img = pygame.image.load('imagens/circulo_a.png').convert_alpha()
+carro_a_img = pygame.image.load('imagens/carro_a.png')
 
 quadrado_v_img = pygame.transform.scale(quadrado_v_img, (largura_comp, altura_comp))
 circulo_v_img = pygame.transform.scale(circulo_v_img, (largura_comp, altura_comp))
@@ -95,7 +89,7 @@ quadrado_a_img = pygame.transform.scale(quadrado_a_img, (largura_comp, altura_co
 circulo_a_img = pygame.transform.scale(circulo_a_img, (largura_comp, altura_comp))
 carro_a_img = pygame.transform.scale(carro_a_img, (largura_comp, altura_carro))
 
-borda_img = pygame.image.load('D:\Insper\DeSoft\Pygame_Melina\imagens/Borda.PNG').convert()
+borda_img = pygame.image.load('imagens/Borda.PNG').convert()
 borda_img = pygame.transform.scale(borda_img, (largura_da_tela, 1))
 
 # ----- Cria classes
@@ -219,26 +213,24 @@ sprites.add(cainicial)
 # ===== Loop principal =====
 while game:
 
-
-
     sound_menu.play()
     
     clock.tick(FPS)
 
     
-    for event in pygame.event.get():
-    # Mouse Posição Click
-        if event.type == pygame.MOUSEBUTTONDOWN:
-            pos = pygame.mouse.get_pos()
+    # for event in pygame.event.get():
+    # # Mouse Posição Click
+    #     if event.type == pygame.MOUSEBUTTONDOWN:
+    #         pos = pygame.mouse.get_pos()
 
 
-    if menu_inicial:
-        tela_menu_inicial(window)
-        if not play_one:
-            play_one=True
+    # if menu_inicial:
+    #     tela_menu_inicial(window)
+    #     if not play_one:
+    #         play_one=True
 
-        if event.type == pygame.MOUSEBUTTONDOWN:
-            menu_inicial = False
+    #     if event.type == pygame.MOUSEBUTTONDOWN:
+    #         menu_inicial = False
 
     # ----- Trata eventos
     for event in pygame.event.get():
@@ -298,4 +290,4 @@ while game:
     pygame.display.update()  # Mostra o novo frame para o jogador
 
 # ===== Finalização =====
-pygame.quit()  # Função do PyGame que finaliza os D:\Insper\DeSoft\Pygame_Melina\imagens utilizados
+pygame.quit()  # Função do PyGame que finaliza os imagens utilizados
